@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <array name="vocabularyList">
+        <item><title>いい加減</title>
+<kana>いいかげん</kana>
+<sample>「いいかげんにしなあさい」と、母親はこどもを叱った(叱った)。\n彼がいい加減な男だ。</sample></item>
+        <item><title>身の回り</title>
+<kana>みのまわり</kana>
+<sample>「火事だ！」という声に、身の回りのものだけ持って逃げた。</sample></item>
+        <item><title>果無い</title>
+<kana>はかない</kana>
+<sample>10歳の果無い一生を終えた。</sample></item>
+        <item><title>とかく</title>
+<kana>とかく</kana>
+<sample>12月とかく忙しくて、落ち着いてない。</sample></item>
+        <item><title>換算</title>
+<kana>かんさん</kana>
+<sample>1インチはセンチメートルに換算すると、約2.54センチメートルになる。</sample></item>
+        <item><title>疎か</title>
+<kana>おろそか</kana>
+<sample>1円でも疎かにしては行けない</sample></item>
+        <item><title>片言</title>
+<kana>かたこと</kana>
+<sample>1歳半の娘は片言だが話をするようになった。</sample></item>
+        <item><title>下火</title>
+<kana>したび</kana>
+<sample>一時間の消火活動で、火はようやく下火になった。</sample></item>
+        <item><title>〜難い</title>
+<kana>かたい</kana>
+<sample>2年前の火災は私にとっては忘れ難い出来事です。</sample></item>
+        <item><title>見なす</title>
+<kana>みなす</kana>
+<sample>30分以上の遅刻は欠席と看做す。</sample></item>
+        <item><title>待ち遠しい</title>
+<kana>まちどおしい</kana>
+<sample>7月になると、夏休みが待ち遠しいです。</sample></item>
+        <item><title>きっかり</title>
+<kana>きっかり</kana>
+<sample>8人できっかり8等分した。</sample></item>
+        <item><title>ずばり</title>
+<kana>ずばり</kana>
+<sample>曖昧な意見が多い中で、彼だけがずばりと答えを出した。</sample></item>
+        <item><title>言い訳</title>
+<kana>いいわけ</kana>
+<sample>あなたが言っていることは、言い訳にもならない。</sample></item>
+        <item><title>極めて</title>
+<kana>きわめて</kana>
+<sample>あなたには努力を続けて、学問の道を極めて欲しい。\n極めて重大な問題だ。</sample></item>
+        <item><title>敢えて</title>
+<kana>あえて</kana>
+<sample>あなたの将来のために、敢えて忠告します。</sample></item>
+        <item><title>甚だ</title>
+<kana>はなはだ</kana>
+<sample>あのチームが負けだのは甚だ残念だ。</sample></item>
+        <item><title>がっちり</title>
+<kana>がっちり</kana>
+<sample>あのチームはがっちりとスクラムを組んで、最後まで戦った。</sample></item>
+        <item><title>健やか</title>
+<kana>すこやか</kana>
+<sample>あの家のこどもたちは、皆健やかたに育っている。\n身も心も健やかで有りたい。</sample></item>
+        <item><title>危機</title>
+<kana>きき</kana>
+<sample>あの芸能人同士のカップリは、しょっちゅう離婚の危機を噂されている。</sample></item>
+        <item><title>心細い</title>
+<kana>こころぼそい</kana>
+<sample>あの山に登るのに、この装備では心細い。</sample></item>
+        <item><title>忠告</title>
+<kana>ちゅうこく</kana>
+<sample>あの時、君の忠告がなければ、今頃私はどうなっていたか判らない。</sample></item>
+        <item><title>驚異</title>
+<kana>きょうい</kana>
+<sample>あの人が合格するなんて、驚異だ。</sample></item>
+        <item><title>強烈</title>
+<kana>きょうれつ</kana>
+<sample>あの人の強烈な個性は、彼の服に現れている。</sample></item>
+        <item><title>辟易</title>
+<kana>へきえき</kana>
+<sample>あの人の自慢話には辟易する。</sample></item>
+        <item><title>極端</title>
+<kana>きょくたん</kana>
+<sample>あの人の発言は、いつでも極端だ。</sample></item>
+        <item><title>淑やか</title>
+<kana>しとやか</kana>
+<sample>あの人の歩き方は淑やかで上品だ。</sample></item>
+        <item><title>絡む</title>
+<kana>からむ</kana>
+<sample>あの人は、お酒を飲むと、すぐに人に絡むから気をつけた方がいい。</sample></item>
+        <item><title>然程</title>
+<kana>さほど</kana>
+<sample>原作と然程変わり有りません！</sample></item>
+        <item><title>起伏</title>
+<kana>きふく</kana>
+<sample>あの人は、山あり谷ありの、起伏の多い人生を送った。</sample></item>
+        <item><title>心強い</title>
+<kana>こころづよい</kana>
+<sample>あの人は、私たちにとって心強い味方だ。</sample></item>
+        <item><title>称する</title>
+<kana>しょうする</kana>
+<sample>あの人は自分を完璧主義と称する。</sample></item>
+        <item><title>賢明</title>
+<kana>けんめい</kana>
+<sample>あの人は賢明な人なので、考えを一度聞いて見た方がよい。</sample></item>
+        <item><title>雑</title>
+<kana>ざつ</kana>
+<sample>あの人は雑な性格なので、よく小さな失敗をする。</sample></item>
+        <item><title>築く</title>
+<kana>きずく</kana>
+<sample>あの人は自分の力だけで、現在の地位を築き上げた。</sample></item>
+        <item><title>生真面目</title>
+<kana>きまじめ</kana>
+<sample>あの人は生真面目すぎて、時々損をしている。</sample></item>
+        <item><title>頑丈</title>
+<kana>がんじょう</kana>
+<sample>あの人は体が頑丈で、一度も病気になったことがない。</sample></item>
+        <item><title>素早い</title>
+<kana>すばやい</kana>
+<sample>あの選手の攻撃はとても素早い。</sample></item>
+        <item><title>脅かす</title>
+<kana>おびやかす</kana>
+<sample>あの選手も新人選手にレギュラーの座を脅かしてる。</sample></item>
+        <item><title>仕上げ</title>
+<kana>しあげ</kana>
+<sample>あの大工さんの仕上げはいつもきれいだ。</sample></item>
+        <item><title>余程</title>
+<kana>よほど</kana>
+<sample>あの大人しい彼がおこるなんて、余程のことがあったに遅くない。</sample></item>
+        <item><title>あくどい</title>
+<kana>あくどい</kana>
+<sample>あの男のあくどいに泣かされた人も多い。</sample></item>
+        <item><title>気障</title>
+<kana>きざ</kana>
+<sample>あの男の紳士打った気障な振る舞いは、皆に嫌われている。</sample></item>
+        <item><title>ずらっと</title>
+<kana>ずらっと</kana>
+<sample>あの店には、新商品がずらっと並んでいる。</sample></item>
+        <item><title>似通う</title>
+<kana>にかよう</kana>
+<sample>あの二人は、姉妹の用に顔が似通っている。</sample></item>
+    </array>
+
+</resources>
