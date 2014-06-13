@@ -12,11 +12,14 @@ import android.app.Activity;
 import android.content.res.XmlResourceParser;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MotionEvent;
 import android.widget.TextView;
 
 import com.iplus.edu.jlpt_voc.model.Vocabulary;
+import com.iplus.edu.jlpt_voc.utils.SimpleGestureFilter;
+import com.iplus.edu.jlpt_voc.utils.SimpleGestureFilter.SimpleGestureListener;
 
-public class Main extends Activity {
+public class Main extends Activity implements SimpleGestureListener {
     private static String TAG = "Main";
     private int currentCount = 0;
     private List<Vocabulary> itemList;
@@ -24,6 +27,8 @@ public class Main extends Activity {
     private TextView titleTV;
     private TextView kanaTV;
     private TextView sampleTV;
+
+    private SimpleGestureFilter detector;
 
     /** Called when the activity is first created. */
     @Override
@@ -34,13 +39,17 @@ public class Main extends Activity {
         this.titleTV = (TextView) findViewById(R.id.title);
         this.kanaTV = (TextView) findViewById(R.id.kana);
         this.sampleTV = (TextView) findViewById(R.id.sample);
-
-        this.itemList = this.getVocData();
+        if (this.itemList == null || this.itemList.size() == 0) {
+            this.itemList = this.getVocData();
+        }
         if (this.currentCount != 0) {
             this.setUI(this.currentCount);
         } else {
             this.setUI(0);
         }
+
+        // Detect touched area
+        detector = new SimpleGestureFilter(this, this);
     }
 
     private List<Vocabulary> getVocData() {
@@ -55,7 +64,7 @@ public class Main extends Activity {
                 switch (eventType) {
                     case XmlPullParser.START_DOCUMENT:
                         // ドキュメント開始
-                        Log.d("tag", "Start Document");
+                        Log.d(TAG, "Start Document");
                         break;
                     case XmlPullParser.START_TAG:
                         // 開始タグ <xxxx>
@@ -87,11 +96,11 @@ public class Main extends Activity {
             }
 
             // ドキュメント終了
-            Log.d("tag", "End Document");
+            Log.d(TAG, "End Document");
 
             // 結果をログ出力
             for (Vocabulary i : itemList) {
-                Log.d("tag", "title = " + i.title
+                Log.d(TAG, "title = " + i.title
                         + " / kana = " + i.kana);
             }
         } catch (XmlPullParserException e) {
@@ -122,4 +131,46 @@ public class Main extends Activity {
         }
     }
 
+    @Override
+    public boolean dispatchTouchEvent(MotionEvent me) {
+        // Call onTouchEvent of SimpleGestureFilter class
+        this.detector.onTouchEvent(me);
+        return super.dispatchTouchEvent(me);
+    }
+
+    @Override
+    public void onSwipe(int direction) {
+        String str = "";
+        switch (direction) {
+            case SimpleGestureFilter.SWIPE_RIGHT:
+                str = "Swipe Right";
+                if (this.currentCount > 0) {
+                    this.currentCount -= 1;
+                } else {
+                    this.currentCount = 0;
+                }
+                break;
+            case SimpleGestureFilter.SWIPE_LEFT:
+                str = "Swipe Left";
+                if (this.currentCount < this.itemList.size() - 1) {
+                    this.currentCount += 1;
+                } else {
+                    this.currentCount = this.itemList.size() - 1;
+                }
+                break;
+            case SimpleGestureFilter.SWIPE_DOWN:
+                str = "Swipe Down";
+                break;
+            case SimpleGestureFilter.SWIPE_UP:
+                str = "Swipe Up";
+                break;
+        }
+        this.setUI(this.currentCount);
+        Log.d(TAG, str);
+    }
+
+    @Override
+    public void onDoubleTap() {
+        Log.d(TAG, "Double Tap");
+    }
 }
