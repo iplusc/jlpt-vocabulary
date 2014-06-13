@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
-
-    <array name="vocabularyList">
+<root>
         <item><title>いい加減</title>
 <kana>いいかげん</kana>
 <sample>「いいかげんにしなあさい」と、母親はこどもを叱った(叱った)。\n彼がいい加減な男だ。</sample></item>
@@ -137,6 +135,4 @@
         <item><title>似通う</title>
 <kana>にかよう</kana>
 <sample>あの二人は、姉妹の用に顔が似通っている。</sample></item>
-    </array>
-
-</resources>
+</root>

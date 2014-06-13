@@ -2,6 +2,7 @@
 package com.iplus.edu.jlpt_voc;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
@@ -31,6 +32,9 @@ public class LaunchSplashScreen extends Activity {
      * Starts the application's {@link MainActivity}.
      */
     private void startMainActivity() {
-
+        /* Create an Intent that will start the FeatureList-Activity. */
+        Intent intent = new Intent(LaunchSplashScreen.this, Main.class);
+        this.startActivity(intent);
+        this.finish();
     }
 }
