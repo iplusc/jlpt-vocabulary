@@ -1,5 +1,8 @@
 <resources>
 
     <string name="app_name">JLPT-語彙</string>
+    <string name="label_kana">ひらがな：</string>
+    <string name="label_sample">用例：</string>
+    <string name="sample">sample</string>
 
 </resources>

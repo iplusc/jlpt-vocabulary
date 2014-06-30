@@ -124,9 +124,9 @@ public class Main extends Activity implements SimpleGestureListener {
             Vocabulary item = this.itemList.get(count);
             String title = item.title;
             this.titleTV.setText(title);
-            String kana = " ひながな: " + item.kana;
+            String kana = item.kana;
             this.kanaTV.setText(kana);
-            String sample = " 用例: " + item.sample;
+            String sample = item.sample;
             this.sampleTV.setText(sample);
         }
     }
