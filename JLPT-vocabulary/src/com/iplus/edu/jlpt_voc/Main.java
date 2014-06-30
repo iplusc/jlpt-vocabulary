@@ -10,6 +10,8 @@ import org.xmlpull.v1.XmlPullParserException;
 
 import android.app.Activity;
 import android.content.res.XmlResourceParser;
+import android.media.AudioManager;
+import android.media.ToneGenerator;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MotionEvent;
@@ -168,6 +170,7 @@ public class Main extends Activity implements SimpleGestureListener {
                 } else {
                     this.currentCount = 0;
                 }
+                this.audioTone();
                 break;
             case SimpleGestureFilter.SWIPE_LEFT:
                 str = "Swipe Left";
@@ -176,6 +179,7 @@ public class Main extends Activity implements SimpleGestureListener {
                 } else {
                     this.currentCount = this.itemList.size() - 1;
                 }
+                this.audioTone();
                 break;
             case SimpleGestureFilter.SWIPE_DOWN:
                 str = "Swipe Down";
@@ -209,5 +213,12 @@ public class Main extends Activity implements SimpleGestureListener {
     public void onDestroy() {
         adView.destroy();
         super.onDestroy();
+    }
+
+    private void audioTone() {
+        final ToneGenerator toneGenerator = new ToneGenerator(
+                AudioManager.STREAM_SYSTEM,
+                ToneGenerator.TONE_CDMA_DIAL_TONE_LITE);
+        toneGenerator.startTone(ToneGenerator.TONE_PROP_BEEP);
     }
 }
