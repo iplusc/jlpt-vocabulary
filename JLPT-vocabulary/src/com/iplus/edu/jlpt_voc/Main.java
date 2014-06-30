@@ -127,6 +127,7 @@ public class Main extends Activity implements SimpleGestureListener {
             String kana = item.kana;
             this.kanaTV.setText(kana);
             String sample = item.sample;
+            sample = sample.replace("\\n", System.getProperty("line.separator"));
             this.sampleTV.setText(sample);
         }
     }
