@@ -69,6 +69,13 @@
             android:layout_height="match_parent"
             android:maxLines="10"
             android:padding="5dip" />
+
+        <LinearLayout
+            android:id="@+id/layout_ad"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+        </LinearLayout>
     </LinearLayout>
 
 </RelativeLayout>

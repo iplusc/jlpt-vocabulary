@@ -13,8 +13,12 @@ import android.content.res.XmlResourceParser;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MotionEvent;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdSize;
+import com.google.android.gms.ads.AdView;
 import com.iplus.edu.jlpt_voc.model.Vocabulary;
 import com.iplus.edu.jlpt_voc.utils.SimpleGestureFilter;
 import com.iplus.edu.jlpt_voc.utils.SimpleGestureFilter.SimpleGestureListener;
@@ -28,6 +32,9 @@ public class Main extends Activity implements SimpleGestureListener {
     private TextView kanaTV;
     private TextView sampleTV;
 
+    LinearLayout layout_ad;
+    AdView adView;
+
     private SimpleGestureFilter detector;
 
     /** Called when the activity is first created. */
@@ -35,6 +42,17 @@ public class Main extends Activity implements SimpleGestureListener {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
+
+        adView = new AdView(this);
+        adView.setAdUnitId("AdMob_UNIT_ID");
+        adView.setAdSize(AdSize.SMART_BANNER);
+
+        layout_ad = (LinearLayout) findViewById(R.id.layout_ad);
+        layout_ad.addView(adView);
+
+        AdRequest adRequest = new AdRequest.Builder().build();
+        adView.loadAd(adRequest);
+
         this.numberTV = (TextView) findViewById(R.id.number);
         this.titleTV = (TextView) findViewById(R.id.title);
         this.kanaTV = (TextView) findViewById(R.id.kana);
@@ -173,5 +191,23 @@ public class Main extends Activity implements SimpleGestureListener {
     @Override
     public void onDoubleTap() {
         Log.d(TAG, "Double Tap");
+    }
+
+    @Override
+    public void onPause() {
+        adView.pause();
+        super.onPause();
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        adView.resume();
+    }
+
+    @Override
+    public void onDestroy() {
+        adView.destroy();
+        super.onDestroy();
     }
 }
