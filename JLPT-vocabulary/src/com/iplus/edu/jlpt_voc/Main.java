@@ -22,6 +22,7 @@ import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdSize;
 import com.google.android.gms.ads.AdView;
 import com.iplus.edu.jlpt_voc.model.Vocabulary;
+import com.iplus.edu.jlpt_voc.utils.Loading;
 import com.iplus.edu.jlpt_voc.utils.SimpleGestureFilter;
 import com.iplus.edu.jlpt_voc.utils.SimpleGestureFilter.SimpleGestureListener;
 
@@ -62,6 +63,7 @@ public class Main extends Activity implements SimpleGestureListener {
         if (this.itemList == null || this.itemList.size() == 0) {
             this.itemList = this.getVocData();
         }
+        Loading.hide();
         if (this.currentCount != 0) {
             this.setUI(this.currentCount);
         } else {

@@ -23,7 +23,7 @@ public class LaunchSplashScreen extends Activity {
             @Override
             public void run() {
                 // showSplashInterstitial();
-                startMainActivity();
+                startMenuActivity();
             }
         }, SPLASH_DISPLAY_LENGHT);
     }
@@ -31,9 +31,9 @@ public class LaunchSplashScreen extends Activity {
     /**
      * Starts the application's {@link MainActivity}.
      */
-    private void startMainActivity() {
+    private void startMenuActivity() {
         /* Create an Intent that will start the FeatureList-Activity. */
-        Intent intent = new Intent(LaunchSplashScreen.this, Main.class);
+        Intent intent = new Intent(LaunchSplashScreen.this, Menu.class);
         this.startActivity(intent);
         this.finish();
     }
