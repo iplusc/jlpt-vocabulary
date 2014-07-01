@@ -215,10 +215,12 @@ public class Main extends Activity implements SimpleGestureListener {
         super.onDestroy();
     }
 
+    private ToneGenerator toneGenerator = new ToneGenerator(
+            AudioManager.STREAM_SYSTEM,
+            ToneGenerator.TONE_CDMA_DIAL_TONE_LITE);;
+
     private void audioTone() {
-        final ToneGenerator toneGenerator = new ToneGenerator(
-                AudioManager.STREAM_SYSTEM,
-                ToneGenerator.TONE_CDMA_DIAL_TONE_LITE);
+        toneGenerator.stopTone();
         toneGenerator.startTone(ToneGenerator.TONE_PROP_BEEP);
     }
 }
