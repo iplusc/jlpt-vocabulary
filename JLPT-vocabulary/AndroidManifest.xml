@@ -46,7 +46,21 @@
 
         <receiver
             android:name="com.iplus.edu.jlpt_voc.alarm.AlarmReceiver"
-            android:process=":remote" />
+            android:process=":remote" >
+            <intent-filter>
+                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+                <action android:name="android.intent.action.TIME_SET" />
+                <action android:name="android.intent.action.DATE_CHANGED" />
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REPLACED" />
+
+                <data
+                    android:path="com.iplus.edu.jlpt_voc"
+                    android:scheme="package" />
+            </intent-filter>
+        </receiver>
 
         <activity
             android:name="com.google.android.gms.ads.AdActivity"

@@ -9,6 +9,7 @@ import android.app.PendingIntent;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.SystemClock;
 
 import com.iplus.edu.jlpt_voc.alarm.AlarmReceiver;
 
@@ -55,6 +56,9 @@ public class LaunchSplashScreen extends Activity {
         calendar.add(Calendar.SECOND, 30); // 現時刻より30秒後を設定
 
         AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
-        alarmManager.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), pendingIntent);
+        // alarmManager.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(),
+        // pendingIntent);
+        alarmManager.setRepeating(AlarmManager.ELAPSED_REALTIME_WAKEUP,
+                SystemClock.elapsedRealtime(), 100 * 1000, pendingIntent);
     }
 }
