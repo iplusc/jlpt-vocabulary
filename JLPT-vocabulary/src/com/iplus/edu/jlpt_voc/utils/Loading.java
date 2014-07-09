@@ -20,6 +20,8 @@ public class Loading {
     }
 
     public static void hide() {
-        dialog.dismiss();
+        if (dialog != null) {
+            dialog.dismiss();
+        }
     }
 }
