@@ -58,7 +58,9 @@ public class LaunchSplashScreen extends Activity {
         AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
         // alarmManager.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(),
         // pendingIntent);
+        // 24 Hours
+        long interval = 60 * 1000 * 60 * 24;
         alarmManager.setRepeating(AlarmManager.ELAPSED_REALTIME_WAKEUP,
-                SystemClock.elapsedRealtime(), 100 * 1000, pendingIntent);
+                SystemClock.elapsedRealtime(), interval, pendingIntent);
     }
 }
