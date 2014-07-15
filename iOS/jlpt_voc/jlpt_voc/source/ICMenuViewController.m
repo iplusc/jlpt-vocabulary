@@ -7,6 +7,7 @@
 //
 
 #import "ICMenuViewController.h"
+#import "ICMainViewController.h"
 #import "GADBannerView.h"
 
 @interface ICMenuViewController ()
@@ -28,8 +29,8 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    UIAlertView *helloWorld = [[UIAlertView alloc]initWithTitle:@"JLPT_VOC" message:@"hello world!!!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
-    [helloWorld show];
+    //UIAlertView *helloWorld = [[UIAlertView alloc]initWithTitle:@"JLPT_VOC" message:@"hello world!!!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+    //[helloWorld show];
     
     [self setLayout];
 }
@@ -43,6 +44,7 @@
     UIButton *n1Button = [UIButton buttonWithType:UIButtonTypeCustom];
     n1Button.frame = CGRectMake( (frame.size.width - button_n1.size.width)/2, (frame.size.height - button_n1.size.height)/2 -130, button_n1.size.width, button_n1.size.height );
     [n1Button setImage:button_n1 forState:UIControlStateNormal];
+    [n1Button addTarget:self action:@selector(showMainPage) forControlEvents:UIControlEventTouchDown];
     
     //N2 Button
     UIImage *button_n2 = [UIImage imageNamed: @"button_n2"];
@@ -68,7 +70,7 @@
     [self.view addSubview:n3Button];
     [self.view addSubview:n4Button];
     
-    [self addAdMob];
+    //[self addAdMob];
 }
 
 - (void)addAdMob
@@ -90,6 +92,12 @@
     [self.view addSubview:bannerView];
     // 一般的なリクエストを行って広告を読み込む。
     [bannerView loadRequest:[GADRequest request]];
+}
+
+- (void)showMainPage
+{
+    ICMainViewController *mainView = [[ICMainViewController alloc]initWithNibName:@"ICMainViewController" bundle:nil];
+    [self presentViewController:mainView animated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning

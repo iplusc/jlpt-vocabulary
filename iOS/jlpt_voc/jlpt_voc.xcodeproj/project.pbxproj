@@ -28,6 +28,9 @@
 		289AC5C0197113BA003A93A4 /* Default~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 289AC5BF197113BA003A93A4 /* Default~iphone.png */; };
 		289AC5C219711405003A93A4 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 289AC5C119711405003A93A4 /* Default-568h@2x.png */; };
 		BCACA2F11974CC0A00A17938 /* AdMob.plist in Resources */ = {isa = PBXBuildFile; fileRef = BCACA2F01974CC0A00A17938 /* AdMob.plist */; };
+		BCACA2F5197502AE00A17938 /* ICMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCACA2F3197502AE00A17938 /* ICMainViewController.m */; };
+		BCACA2F6197502AE00A17938 /* ICMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCACA2F4197502AE00A17938 /* ICMainViewController.xib */; };
+		BCACA2F919750D0F00A17938 /* ICDeviceHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BCACA2F819750D0F00A17938 /* ICDeviceHelper.m */; };
 		BCACCF2C1974BA5700BCAEF4 /* ICMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCACCF2B1974BA5700BCAEF4 /* ICMenuViewController.m */; };
 		BCACCF321974C09B00BCAEF4 /* button_n1.png in Resources */ = {isa = PBXBuildFile; fileRef = BCACCF2E1974C09B00BCAEF4 /* button_n1.png */; };
 		BCACCF331974C09B00BCAEF4 /* button_n2.png in Resources */ = {isa = PBXBuildFile; fileRef = BCACCF2F1974C09B00BCAEF4 /* button_n2.png */; };
@@ -78,6 +81,11 @@
 		289AC5BF197113BA003A93A4 /* Default~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default~iphone.png"; sourceTree = "<group>"; };
 		289AC5C119711405003A93A4 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		BCACA2F01974CC0A00A17938 /* AdMob.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AdMob.plist; sourceTree = "<group>"; };
+		BCACA2F2197502AE00A17938 /* ICMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICMainViewController.h; sourceTree = "<group>"; };
+		BCACA2F3197502AE00A17938 /* ICMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICMainViewController.m; sourceTree = "<group>"; };
+		BCACA2F4197502AE00A17938 /* ICMainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ICMainViewController.xib; sourceTree = "<group>"; };
+		BCACA2F719750D0F00A17938 /* ICDeviceHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICDeviceHelper.h; sourceTree = "<group>"; };
+		BCACA2F819750D0F00A17938 /* ICDeviceHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICDeviceHelper.m; sourceTree = "<group>"; };
 		BCACCF2A1974BA5700BCAEF4 /* ICMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICMenuViewController.h; sourceTree = "<group>"; };
 		BCACCF2B1974BA5700BCAEF4 /* ICMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICMenuViewController.m; sourceTree = "<group>"; };
 		BCACCF2E1974C09B00BCAEF4 /* button_n1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_n1.png; sourceTree = "<group>"; };
@@ -226,6 +234,11 @@
 			children = (
 				BCACCF2A1974BA5700BCAEF4 /* ICMenuViewController.h */,
 				BCACCF2B1974BA5700BCAEF4 /* ICMenuViewController.m */,
+				BCACA2F2197502AE00A17938 /* ICMainViewController.h */,
+				BCACA2F3197502AE00A17938 /* ICMainViewController.m */,
+				BCACA2F4197502AE00A17938 /* ICMainViewController.xib */,
+				BCACA2F719750D0F00A17938 /* ICDeviceHelper.h */,
+				BCACA2F819750D0F00A17938 /* ICDeviceHelper.m */,
 			);
 			path = source;
 			sourceTree = "<group>";
@@ -346,6 +359,7 @@
 				289AC58D19710B2B003A93A4 /* InfoPlist.strings in Resources */,
 				BCACCF341974C09B00BCAEF4 /* button_n3.png in Resources */,
 				BCACCF321974C09B00BCAEF4 /* button_n1.png in Resources */,
+				BCACA2F6197502AE00A17938 /* ICMainViewController.xib in Resources */,
 				BCACCF331974C09B00BCAEF4 /* button_n2.png in Resources */,
 				289AC5B819711139003A93A4 /* icon_120.png in Resources */,
 				289AC5C219711405003A93A4 /* Default-568h@2x.png in Resources */,
@@ -372,8 +386,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				289AC59319710B2B003A93A4 /* ICAppDelegate.m in Sources */,
+				BCACA2F919750D0F00A17938 /* ICDeviceHelper.m in Sources */,
 				BCACCF2C1974BA5700BCAEF4 /* ICMenuViewController.m in Sources */,
 				289AC58F19710B2B003A93A4 /* main.m in Sources */,
+				BCACA2F5197502AE00A17938 /* ICMainViewController.m in Sources */,
 				289AC59919710B2B003A93A4 /* ICViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
