@@ -47,7 +47,7 @@ public class Main extends Activity implements SimpleGestureListener {
         setContentView(R.layout.main);
 
         adView = new AdView(this);
-        adView.setAdUnitId("AdMob_UNIT_ID");
+        adView.setAdUnitId(getString(R.string.adunitid));
         adView.setAdSize(AdSize.SMART_BANNER);
 
         layout_ad = (LinearLayout) findViewById(R.id.layout_ad);
