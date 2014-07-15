@@ -45,3 +45,6 @@ profile
 DerivedData
 .idea/
 documentation
+
+#AdMob
+iOS/jlpt_voc/jlpt_voc/resource/AdMob.plist

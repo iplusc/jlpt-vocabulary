@@ -82,6 +82,7 @@
     NSString* path = [bundle pathForResource:@"AdMob" ofType:@"plist"];
     NSDictionary* dic = [NSDictionary dictionaryWithContentsOfFile:path];
     NSString *unitID = [dic objectForKey:@"adUnitID"];
+    NSLog(@"unitID::: %@",unitID);
     bannerView.adUnitID = unitID;
     
     // ビュー階層に追加する。
