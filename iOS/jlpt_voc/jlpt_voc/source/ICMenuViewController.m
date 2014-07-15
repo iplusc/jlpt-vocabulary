@@ -77,7 +77,12 @@
                                  initWithFrame:CGRectMake(0.0,self.view.frame.size.height - GAD_SIZE_320x50.height,
                                                           GAD_SIZE_320x50.width,
                                                           GAD_SIZE_320x50.height)];
-    bannerView.adUnitID = @"広告ユニットID";
+    NSBundle* bundle = [NSBundle mainBundle];
+    //読み込むファイルパスを指定
+    NSString* path = [bundle pathForResource:@"AdMob" ofType:@"plist"];
+    NSDictionary* dic = [NSDictionary dictionaryWithContentsOfFile:path];
+    NSString *unitID = [dic objectForKey:@"adUnitID"];
+    bannerView.adUnitID = unitID;
     
     // ビュー階層に追加する。
     bannerView.rootViewController = self;

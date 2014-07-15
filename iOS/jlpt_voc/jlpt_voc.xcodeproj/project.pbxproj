@@ -27,6 +27,7 @@
 		289AC5BE19711388003A93A4 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 289AC5BD19711388003A93A4 /* Default.png */; };
 		289AC5C0197113BA003A93A4 /* Default~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 289AC5BF197113BA003A93A4 /* Default~iphone.png */; };
 		289AC5C219711405003A93A4 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 289AC5C119711405003A93A4 /* Default-568h@2x.png */; };
+		BCACA2F11974CC0A00A17938 /* AdMob.plist in Resources */ = {isa = PBXBuildFile; fileRef = BCACA2F01974CC0A00A17938 /* AdMob.plist */; };
 		BCACCF2C1974BA5700BCAEF4 /* ICMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BCACCF2B1974BA5700BCAEF4 /* ICMenuViewController.m */; };
 		BCACCF321974C09B00BCAEF4 /* button_n1.png in Resources */ = {isa = PBXBuildFile; fileRef = BCACCF2E1974C09B00BCAEF4 /* button_n1.png */; };
 		BCACCF331974C09B00BCAEF4 /* button_n2.png in Resources */ = {isa = PBXBuildFile; fileRef = BCACCF2F1974C09B00BCAEF4 /* button_n2.png */; };
@@ -76,6 +77,7 @@
 		289AC5BD19711388003A93A4 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		289AC5BF197113BA003A93A4 /* Default~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default~iphone.png"; sourceTree = "<group>"; };
 		289AC5C119711405003A93A4 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		BCACA2F01974CC0A00A17938 /* AdMob.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AdMob.plist; sourceTree = "<group>"; };
 		BCACCF2A1974BA5700BCAEF4 /* ICMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICMenuViewController.h; sourceTree = "<group>"; };
 		BCACCF2B1974BA5700BCAEF4 /* ICMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICMenuViewController.m; sourceTree = "<group>"; };
 		BCACCF2E1974C09B00BCAEF4 /* button_n1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_n1.png; sourceTree = "<group>"; };
@@ -235,6 +237,7 @@
 				BCACCF2F1974C09B00BCAEF4 /* button_n2.png */,
 				BCACCF301974C09B00BCAEF4 /* button_n3.png */,
 				BCACCF311974C09B00BCAEF4 /* button_n4.png */,
+				BCACA2F01974CC0A00A17938 /* AdMob.plist */,
 			);
 			path = resource;
 			sourceTree = "<group>";
@@ -336,6 +339,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCACA2F11974CC0A00A17938 /* AdMob.plist in Resources */,
 				289AC59B19710B2B003A93A4 /* Images.xcassets in Resources */,
 				289AC5BC197112AD003A93A4 /* icon_114.png in Resources */,
 				289AC5BA19711254003A93A4 /* icon_057.png in Resources */,
