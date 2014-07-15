@@ -7,6 +7,7 @@
 //
 
 #import "ICMenuViewController.h"
+#import "GADBannerView.h"
 
 @interface ICMenuViewController ()
 
@@ -29,6 +30,60 @@
     // Do any additional setup after loading the view.
     UIAlertView *helloWorld = [[UIAlertView alloc]initWithTitle:@"JLPT_VOC" message:@"hello world!!!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
     [helloWorld show];
+    
+    [self setLayout];
+}
+
+- (void)setLayout
+{
+    CGRect frame = self.view.frame;
+    
+    //N1 Button
+    UIImage *button_n1 = [UIImage imageNamed: @"button_n1"];
+    UIButton *n1Button = [UIButton buttonWithType:UIButtonTypeCustom];
+    n1Button.frame = CGRectMake( (frame.size.width - button_n1.size.width)/2, (frame.size.height - button_n1.size.height)/2 -130, button_n1.size.width, button_n1.size.height );
+    [n1Button setImage:button_n1 forState:UIControlStateNormal];
+    
+    //N2 Button
+    UIImage *button_n2 = [UIImage imageNamed: @"button_n2"];
+    UIButton *n2Button = [UIButton buttonWithType:UIButtonTypeCustom];
+    n2Button.frame = CGRectMake( (frame.size.width - button_n2.size.width)/2, (frame.size.height - button_n2.size.height)/2 -55, button_n2.size.width, button_n2.size.height );
+    [n2Button setImage:button_n2 forState:UIControlStateNormal];
+    
+    //N3 Button
+    UIImage *button_n3 = [UIImage imageNamed: @"button_n3"];
+    UIButton *n3Button = [UIButton buttonWithType:UIButtonTypeCustom];
+    n3Button.frame = CGRectMake( (frame.size.width - button_n3.size.width)/2, (frame.size.height - button_n3.size.height)/2 +20, button_n3.size.width, button_n3.size.height );
+    [n3Button setImage:button_n3 forState:UIControlStateNormal];
+    
+    //N2 Button
+    UIImage *button_n4 = [UIImage imageNamed: @"button_n4"];
+    UIButton *n4Button = [UIButton buttonWithType:UIButtonTypeCustom];
+    n4Button.frame = CGRectMake( (frame.size.width - button_n4.size.width)/2, (frame.size.height - button_n4.size.height)/2 +105, button_n4.size.width, button_n4.size.height );
+    [n4Button setImage:button_n4 forState:UIControlStateNormal];
+    
+    
+    [self.view addSubview:n1Button];
+    [self.view addSubview:n2Button];
+    [self.view addSubview:n3Button];
+    [self.view addSubview:n4Button];
+    
+    [self addAdMob];
+}
+
+- (void)addAdMob
+{
+    GADBannerView* bannerView = [[GADBannerView alloc]
+                                 initWithFrame:CGRectMake(0.0,self.view.frame.size.height - GAD_SIZE_320x50.height,
+                                                          GAD_SIZE_320x50.width,
+                                                          GAD_SIZE_320x50.height)];
+    bannerView.adUnitID = @"広告ユニットID";
+    
+    // ビュー階層に追加する。
+    bannerView.rootViewController = self;
+    [self.view addSubview:bannerView];
+    // 一般的なリクエストを行って広告を読み込む。
+    [bannerView loadRequest:[GADRequest request]];
 }
 
 - (void)didReceiveMemoryWarning
