@@ -7,6 +7,7 @@
 //
 
 #import "ICMenuViewController.h"
+#import "GADBannerView.h"
 
 @interface ICMenuViewController ()
 
@@ -67,6 +68,22 @@
     [self.view addSubview:n3Button];
     [self.view addSubview:n4Button];
     
+    [self addAdMob];
+}
+
+- (void)addAdMob
+{
+    GADBannerView* bannerView = [[GADBannerView alloc]
+                                 initWithFrame:CGRectMake(0.0,self.view.frame.size.height - GAD_SIZE_320x50.height,
+                                                          GAD_SIZE_320x50.width,
+                                                          GAD_SIZE_320x50.height)];
+    bannerView.adUnitID = @"広告ユニットID";
+    
+    // ビュー階層に追加する。
+    bannerView.rootViewController = self;
+    [self.view addSubview:bannerView];
+    // 一般的なリクエストを行って広告を読み込む。
+    [bannerView loadRequest:[GADRequest request]];
 }
 
 - (void)didReceiveMemoryWarning
