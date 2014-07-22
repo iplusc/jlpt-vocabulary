@@ -42,6 +42,7 @@
 		BCACCF4A1974C73B00BCAEF4 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCACCF491974C73B00BCAEF4 /* SystemConfiguration.framework */; };
 		BCACCF4C1974C75A00BCAEF4 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCACCF4B1974C75A00BCAEF4 /* AVFoundation.framework */; };
 		BCACCF4E1974C76000BCAEF4 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCACCF4D1974C76000BCAEF4 /* StoreKit.framework */; };
+		BCEA2B1A197E30330038DD6C /* XMLDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = BCEA2B19197E30330038DD6C /* XMLDictionary.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +111,8 @@
 		BCACCF491974C73B00BCAEF4 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		BCACCF4B1974C75A00BCAEF4 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		BCACCF4D1974C76000BCAEF4 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		BCEA2B18197E30330038DD6C /* XMLDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLDictionary.h; sourceTree = "<group>"; };
+		BCEA2B19197E30330038DD6C /* XMLDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLDictionary.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +183,7 @@
 		289AC58819710B2B003A93A4 /* jlpt_voc */ = {
 			isa = PBXGroup;
 			children = (
+				BCEA2B17197E30330038DD6C /* XMLDictionary */,
 				BCACCF361974C6ED00BCAEF4 /* AdMob */,
 				BCACCF2D1974C05E00BCAEF4 /* resource */,
 				BCACCF291974BA3F00BCAEF4 /* source */,
@@ -273,6 +277,15 @@
 				BCACCF431974C70600BCAEF4 /* libGoogleAdMobAds.a */,
 			);
 			path = AdMob;
+			sourceTree = "<group>";
+		};
+		BCEA2B17197E30330038DD6C /* XMLDictionary */ = {
+			isa = PBXGroup;
+			children = (
+				BCEA2B18197E30330038DD6C /* XMLDictionary.h */,
+				BCEA2B19197E30330038DD6C /* XMLDictionary.m */,
+			);
+			path = XMLDictionary;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -388,6 +401,7 @@
 				289AC59319710B2B003A93A4 /* ICAppDelegate.m in Sources */,
 				BCACA2F919750D0F00A17938 /* ICDeviceHelper.m in Sources */,
 				BCACCF2C1974BA5700BCAEF4 /* ICMenuViewController.m in Sources */,
+				BCEA2B1A197E30330038DD6C /* XMLDictionary.m in Sources */,
 				289AC58F19710B2B003A93A4 /* main.m in Sources */,
 				BCACA2F5197502AE00A17938 /* ICMainViewController.m in Sources */,
 				289AC59919710B2B003A93A4 /* ICViewController.m in Sources */,
