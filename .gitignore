@@ -46,6 +46,10 @@ DerivedData
 .idea/
 documentation
 
+#CocoaPod
+iOS/jlpt_voc/Pods/*
+iOS/jlpt_voc/Podfile.lock
+
 #AdMob
 Android/JLPT-vocabulary/res/values/admob.xml
 iOS/jlpt_voc/jlpt_voc/resource/AdMob.plist
