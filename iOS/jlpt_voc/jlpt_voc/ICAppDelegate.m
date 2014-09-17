@@ -8,11 +8,16 @@
 
 #import "ICAppDelegate.h"
 #import "ICMenuViewController.h"
+#import "TestFlight.h"
 
 @implementation ICAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    // start of your application:didFinishLaunchingWithOptions // ...
+    [TestFlight takeOff:@"75996186-b5a0-46c5-af5e-3e955acf69f9"];
+    // The rest of your application:didFinishLaunchingWithOptions method// ...
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
     ICMenuViewController *viewController = [[ICMenuViewController alloc] init];
